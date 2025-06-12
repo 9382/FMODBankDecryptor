@@ -11,7 +11,7 @@ This is a CLI tool and is therefore used as such
 ### Arguments
 - `--key` - Regular string. Required to actually decrypt bank files
 - `--output-folder` - If specified, all decrypted banks will be created in the given folder. Otherwise, decrpyted bank files will be made in the same folder as their original file with the `.decrypted.bank` extension
-- `--guess` - Tries to provide a guess for what the encryption key might be for a bank file. Not guaranteed to be correct
+- `--guess` - Tries to provide a guess for what the start of the encryption key might be for a bank file. Not guaranteed to be correct
 - `--verbose` - Toggles extra debug information.
 
 Input files and folders are specified after the named arguments. If a folder is provided, all files ending `.bank` (that aren't `.decrypted.bank`) in that folder will be used
