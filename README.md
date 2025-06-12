@@ -2,7 +2,7 @@
 
 A tool to decrypt `.bank` files generated with an encryption key by FMOD Studio
 
-Tested on FMOD Studio 2.03 bank files
+Tested on FMOD Studio 2.03 bank files upwards of 160MB large
 
 ## Usage
 
