@@ -84,7 +84,11 @@ public class Program
         int SNDHeaderPosition = FindInArray(fileContents, SNDHeader).GetValueOrDefault(-1); // eh
         if (SNDHeaderPosition <= 0 || SNDHeaderPosition + 10 >= fileContents.Length)
         {
-            Console.WriteLine($"[!] Bank \"{filePath}\" doesn't have a valid SND marker in it, so no encrypted content can be located");
+            if (filePath.EndsWith("Master.bank") || filePath.EndsWith("Master.strings.bank")) {
+                Console.WriteLine($"[!] Bank \"{filePath}\" has no valid SND marker, so no encrypted content can be found (This is normal for Master banks)");
+            } else {
+                Console.WriteLine($"[!] Bank \"{filePath}\" has no valid SND marker, so no encrypted content can be found");
+            }
             return;
         }
 
